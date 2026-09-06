@@ -675,7 +675,7 @@ $('startBtn').addEventListener('click', startGame);
 $('tryAgain').addEventListener('click', startGame);
 
 /* ---- words ---- */
-const API_BASE = 'https://script.google.com/macros/s/AKfycbyFVh9mer_RYFupFwVyOZbWpBwk4BoGasmF8NomSbr14RN4_FzVXZxqjRgoo9_1KXx10w/exec';
+const API_BASE = 'https://script.google.com/macros/s/AKfycbwodxI--tQ9yrnnfVrsSUYOWhvwyRXTuJZk8vTUU_Or5lSGTXUiB0xc8yybJdE54frB/exec';
 
 async function loadWords() {
   // 1) live spreadsheet via GAS  2) local words.json  3) built-in 20-word list
@@ -701,11 +701,6 @@ async function loadWords() {
   }
 }
 
-/** POST helper that avoids a CORS preflight against the GAS web app (text/plain body, JSON-parsed server-side). */
-function apiPost(payload) {
-  return fetch(API_BASE, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) })
-    .then(r => r.json()).catch(() => null);
-}
 function apiGet(params) {
   return fetch(`${API_BASE}?${new URLSearchParams(params)}`, { cache: 'no-store' }).then(r => r.json()).catch(() => null);
 }
@@ -914,7 +909,11 @@ function endGame() {
   game.timer = null;
 
   if (rec.words > 0 && settings.cls && settings.num) {
-    apiPost({
+    // sent as GET: a POST to a GAS web app can be silently downgraded to GET by the
+    // browser on the script.google.com -> googleusercontent.com redirect, which drops
+    // the body. GET has no body to lose, so it's the reliable path.
+    apiGet({
+      action: 'submit',
       classNumber: `${settings.cls}-${settings.num}`,
       mode: rec.mode, meaning: rec.meaning, duration: rec.duration,
       words: rec.words, maxCombo: rec.maxCombo, accuracy: rec.accuracy,
