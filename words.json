@@ -1,0 +1,1238 @@
+{
+"source": "PICKS_HANABI_core_words.xlsx",
+"updated": "2026-09-05",
+"words": [
+{
+"id": "W001",
+"ja": "～である／いる",
+"en": "be",
+"category": "verb",
+"tag": "be動詞"
+},
+{
+"id": "W002",
+"ja": "持っている／～がある",
+"en": "have",
+"category": "verb",
+"tag": "一般動詞; 現在完了"
+},
+{
+"id": "W003",
+"ja": "する",
+"en": "do",
+"category": "verb",
+"tag": "一般動詞; 疑問文・否定文"
+},
+{
+"id": "W004",
+"ja": "言う",
+"en": "say",
+"category": "verb",
+"tag": "一般動詞; 発話"
+},
+{
+"id": "W005",
+"ja": "伝える／話す",
+"en": "tell",
+"category": "verb",
+"tag": "一般動詞; 発話"
+},
+{
+"id": "W006",
+"ja": "話す",
+"en": "speak",
+"category": "verb",
+"tag": "一般動詞; 発話"
+},
+{
+"id": "W007",
+"ja": "話す",
+"en": "talk",
+"category": "verb",
+"tag": "一般動詞; 発話"
+},
+{
+"id": "W008",
+"ja": "たずねる／頼む",
+"en": "ask",
+"category": "verb",
+"tag": "一般動詞; 発話"
+},
+{
+"id": "W009",
+"ja": "答える",
+"en": "answer",
+"category": "verb",
+"tag": "一般動詞; 発話"
+},
+{
+"id": "W010",
+"ja": "知っている",
+"en": "know",
+"category": "verb",
+"tag": "一般動詞; 思考"
+},
+{
+"id": "W011",
+"ja": "思う／考える",
+"en": "think",
+"category": "verb",
+"tag": "一般動詞; 思考"
+},
+{
+"id": "W012",
+"ja": "理解する",
+"en": "understand",
+"category": "verb",
+"tag": "一般動詞; 思考"
+},
+{
+"id": "W013",
+"ja": "覚えている",
+"en": "remember",
+"category": "verb",
+"tag": "一般動詞; 思考"
+},
+{
+"id": "W014",
+"ja": "忘れる",
+"en": "forget",
+"category": "verb",
+"tag": "一般動詞; 思考"
+},
+{
+"id": "W015",
+"ja": "学ぶ",
+"en": "learn",
+"category": "verb",
+"tag": "一般動詞; 学習"
+},
+{
+"id": "W016",
+"ja": "勉強する",
+"en": "study",
+"category": "verb",
+"tag": "一般動詞; 学習"
+},
+{
+"id": "W017",
+"ja": "読む",
+"en": "read",
+"category": "verb",
+"tag": "一般動詞; 学習"
+},
+{
+"id": "W018",
+"ja": "書く",
+"en": "write",
+"category": "verb",
+"tag": "一般動詞; 学習"
+},
+{
+"id": "W019",
+"ja": "使う",
+"en": "use",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W020",
+"ja": "作る／～にする",
+"en": "make",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W021",
+"ja": "取る／連れていく",
+"en": "take",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W022",
+"ja": "与える",
+"en": "give",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W023",
+"ja": "得る／～になる",
+"en": "get",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W024",
+"ja": "見つける／わかる",
+"en": "find",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W025",
+"ja": "見せる",
+"en": "show",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W026",
+"ja": "助ける",
+"en": "help",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W027",
+"ja": "必要とする",
+"en": "need",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W028",
+"ja": "欲しい／～したい",
+"en": "want",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W029",
+"ja": "好む",
+"en": "like",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W030",
+"ja": "大好きである",
+"en": "love",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W031",
+"ja": "住む／生きる",
+"en": "live",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W032",
+"ja": "働く／機能する",
+"en": "work",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W033",
+"ja": "遊ぶ／競技する／演奏する",
+"en": "play",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W034",
+"ja": "行く",
+"en": "go",
+"category": "verb",
+"tag": "一般動詞; 移動"
+},
+{
+"id": "W035",
+"ja": "来る",
+"en": "come",
+"category": "verb",
+"tag": "一般動詞; 移動"
+},
+{
+"id": "W036",
+"ja": "去る／出発する",
+"en": "leave",
+"category": "verb",
+"tag": "一般動詞; 移動"
+},
+{
+"id": "W037",
+"ja": "到着する",
+"en": "arrive",
+"category": "verb",
+"tag": "一般動詞; 移動"
+},
+{
+"id": "W038",
+"ja": "訪れる",
+"en": "visit",
+"category": "verb",
+"tag": "一般動詞; 移動"
+},
+{
+"id": "W039",
+"ja": "見る／会う",
+"en": "see",
+"category": "verb",
+"tag": "一般動詞; 知覚"
+},
+{
+"id": "W040",
+"ja": "見る",
+"en": "look",
+"category": "verb",
+"tag": "一般動詞; 知覚"
+},
+{
+"id": "W041",
+"ja": "見る",
+"en": "watch",
+"category": "verb",
+"tag": "一般動詞; 知覚"
+},
+{
+"id": "W042",
+"ja": "聞こえる／聞く",
+"en": "hear",
+"category": "verb",
+"tag": "一般動詞; 知覚"
+},
+{
+"id": "W043",
+"ja": "聞く",
+"en": "listen",
+"category": "verb",
+"tag": "一般動詞; 知覚"
+},
+{
+"id": "W044",
+"ja": "感じる",
+"en": "feel",
+"category": "verb",
+"tag": "一般動詞; 知覚"
+},
+{
+"id": "W045",
+"ja": "～になる",
+"en": "become",
+"category": "verb",
+"tag": "一般動詞; 変化"
+},
+{
+"id": "W046",
+"ja": "始まる／始める",
+"en": "begin",
+"category": "verb",
+"tag": "一般動詞; 変化"
+},
+{
+"id": "W047",
+"ja": "始める／始まる",
+"en": "start",
+"category": "verb",
+"tag": "一般動詞; 変化"
+},
+{
+"id": "W048",
+"ja": "止める／止まる",
+"en": "stop",
+"category": "verb",
+"tag": "一般動詞; 変化"
+},
+{
+"id": "W049",
+"ja": "保つ／続ける",
+"en": "keep",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W050",
+"ja": "試す／努力する",
+"en": "try",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W051",
+"ja": "動く／動かす",
+"en": "move",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W052",
+"ja": "変わる／変える",
+"en": "change",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W053",
+"ja": "持ってくる",
+"en": "bring",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W054",
+"ja": "買う",
+"en": "buy",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W055",
+"ja": "食べる",
+"en": "eat",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W056",
+"ja": "飲む",
+"en": "drink",
+"category": "verb",
+"tag": "一般動詞"
+},
+{
+"id": "W057",
+"ja": "～できる",
+"en": "can",
+"category": "modal",
+"tag": "助動詞; 能力・可能"
+},
+{
+"id": "W058",
+"ja": "～できた／～かもしれない",
+"en": "could",
+"category": "modal",
+"tag": "助動詞; 過去・丁寧"
+},
+{
+"id": "W059",
+"ja": "～するつもりだ／～だろう",
+"en": "will",
+"category": "modal",
+"tag": "助動詞; 未来"
+},
+{
+"id": "W060",
+"ja": "～するだろう／～していただけますか",
+"en": "would",
+"category": "modal",
+"tag": "助動詞; 仮定・丁寧"
+},
+{
+"id": "W061",
+"ja": "～してもよい／～かもしれない",
+"en": "may",
+"category": "modal",
+"tag": "助動詞; 許可・可能性"
+},
+{
+"id": "W062",
+"ja": "～しなければならない／～に違いない",
+"en": "must",
+"category": "modal",
+"tag": "助動詞; 義務・推量"
+},
+{
+"id": "W063",
+"ja": "～すべきだ",
+"en": "should",
+"category": "modal",
+"tag": "助動詞; 助言"
+},
+{
+"id": "W064",
+"ja": "～しましょうか",
+"en": "shall",
+"category": "modal",
+"tag": "助動詞; 提案"
+},
+{
+"id": "W065",
+"ja": "～の中に／～で",
+"en": "in",
+"category": "preposition",
+"tag": "場所; 時"
+},
+{
+"id": "W066",
+"ja": "～の上に／～に",
+"en": "on",
+"category": "preposition",
+"tag": "場所; 曜日・日付"
+},
+{
+"id": "W067",
+"ja": "～で／～に",
+"en": "at",
+"category": "preposition",
+"tag": "場所; 時刻"
+},
+{
+"id": "W068",
+"ja": "～へ／～に",
+"en": "to",
+"category": "preposition",
+"tag": "方向"
+},
+{
+"id": "W069",
+"ja": "～から",
+"en": "from",
+"category": "preposition",
+"tag": "起点"
+},
+{
+"id": "W070",
+"ja": "～のために／～の間",
+"en": "for",
+"category": "preposition",
+"tag": "目的; 期間"
+},
+{
+"id": "W071",
+"ja": "～と一緒に／～を使って",
+"en": "with",
+"category": "preposition",
+"tag": "一緒; 手段"
+},
+{
+"id": "W072",
+"ja": "～によって／～までに／～のそばに",
+"en": "by",
+"category": "preposition",
+"tag": "手段; 期限; 場所"
+},
+{
+"id": "W073",
+"ja": "～の",
+"en": "of",
+"category": "preposition",
+"tag": "所属・関係"
+},
+{
+"id": "W074",
+"ja": "～について",
+"en": "about",
+"category": "preposition",
+"tag": "話題"
+},
+{
+"id": "W075",
+"ja": "～として",
+"en": "as",
+"category": "preposition",
+"tag": "役割"
+},
+{
+"id": "W076",
+"ja": "～の前に",
+"en": "before",
+"category": "preposition",
+"tag": "時間"
+},
+{
+"id": "W077",
+"ja": "～の後に",
+"en": "after",
+"category": "preposition",
+"tag": "時間"
+},
+{
+"id": "W078",
+"ja": "～の間に",
+"en": "during",
+"category": "preposition",
+"tag": "時間"
+},
+{
+"id": "W079",
+"ja": "～の間に",
+"en": "between",
+"category": "preposition",
+"tag": "場所・関係"
+},
+{
+"id": "W080",
+"ja": "～の間で",
+"en": "among",
+"category": "preposition",
+"tag": "場所・関係"
+},
+{
+"id": "W081",
+"ja": "～の下に",
+"en": "under",
+"category": "preposition",
+"tag": "場所"
+},
+{
+"id": "W082",
+"ja": "～の上に／～を越えて",
+"en": "over",
+"category": "preposition",
+"tag": "場所・移動"
+},
+{
+"id": "W083",
+"ja": "～の中へ",
+"en": "into",
+"category": "preposition",
+"tag": "方向"
+},
+{
+"id": "W084",
+"ja": "～を通って／～を通じて",
+"en": "through",
+"category": "preposition",
+"tag": "通過・手段"
+},
+{
+"id": "W085",
+"ja": "～の周りに／およそ",
+"en": "around",
+"category": "preposition",
+"tag": "場所; 程度"
+},
+{
+"id": "W086",
+"ja": "～の近くに",
+"en": "near",
+"category": "preposition",
+"tag": "場所"
+},
+{
+"id": "W087",
+"ja": "～なしで",
+"en": "without",
+"category": "preposition",
+"tag": "状態"
+},
+{
+"id": "W088",
+"ja": "～に反対して／～に対して",
+"en": "against",
+"category": "preposition",
+"tag": "関係"
+},
+{
+"id": "W089",
+"ja": "何／どんなもの",
+"en": "what",
+"category": "question",
+"tag": "疑問詞"
+},
+{
+"id": "W090",
+"ja": "だれ",
+"en": "who",
+"category": "question",
+"tag": "疑問詞"
+},
+{
+"id": "W091",
+"ja": "だれの",
+"en": "whose",
+"category": "question",
+"tag": "疑問詞"
+},
+{
+"id": "W092",
+"ja": "どちら／どの",
+"en": "which",
+"category": "question",
+"tag": "疑問詞"
+},
+{
+"id": "W093",
+"ja": "いつ",
+"en": "when",
+"category": "question",
+"tag": "疑問詞"
+},
+{
+"id": "W094",
+"ja": "どこ",
+"en": "where",
+"category": "question",
+"tag": "疑問詞"
+},
+{
+"id": "W095",
+"ja": "なぜ",
+"en": "why",
+"category": "question",
+"tag": "疑問詞"
+},
+{
+"id": "W096",
+"ja": "どのように／どれくらい",
+"en": "how",
+"category": "question",
+"tag": "疑問詞"
+},
+{
+"id": "W097",
+"ja": "私は／私が",
+"en": "I",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W098",
+"ja": "あなたは／あなたが／あなたたちは",
+"en": "you",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W099",
+"ja": "彼は／彼が",
+"en": "he",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W100",
+"ja": "彼女は／彼女が",
+"en": "she",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W101",
+"ja": "それは／それが",
+"en": "it",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W102",
+"ja": "私たちは／私たちが",
+"en": "we",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W103",
+"ja": "彼らは／それらは",
+"en": "they",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W104",
+"ja": "私を／私に",
+"en": "me",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W105",
+"ja": "彼を／彼に",
+"en": "him",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W106",
+"ja": "彼女を／彼女に",
+"en": "her",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W107",
+"ja": "私たちを／私たちに",
+"en": "us",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W108",
+"ja": "彼らを／それらを",
+"en": "them",
+"category": "pronoun",
+"tag": "人称代名詞"
+},
+{
+"id": "W109",
+"ja": "これ／この",
+"en": "this",
+"category": "pronoun",
+"tag": "指示語"
+},
+{
+"id": "W110",
+"ja": "それ／あれ／その",
+"en": "that",
+"category": "pronoun",
+"tag": "指示語"
+},
+{
+"id": "W111",
+"ja": "これら／これらの",
+"en": "these",
+"category": "pronoun",
+"tag": "指示語"
+},
+{
+"id": "W112",
+"ja": "それら／あれら／それらの",
+"en": "those",
+"category": "pronoun",
+"tag": "指示語"
+},
+{
+"id": "W113",
+"ja": "だれか",
+"en": "someone",
+"category": "pronoun",
+"tag": "不定代名詞"
+},
+{
+"id": "W114",
+"ja": "何か",
+"en": "something",
+"category": "pronoun",
+"tag": "不定代名詞"
+},
+{
+"id": "W115",
+"ja": "みんな／だれもが",
+"en": "everyone",
+"category": "pronoun",
+"tag": "不定代名詞"
+},
+{
+"id": "W116",
+"ja": "すべてのもの／こと",
+"en": "everything",
+"category": "pronoun",
+"tag": "不定代名詞"
+},
+{
+"id": "W117",
+"ja": "そして／～と～",
+"en": "and",
+"category": "conjunction",
+"tag": "等位接続詞"
+},
+{
+"id": "W118",
+"ja": "しかし／でも",
+"en": "but",
+"category": "conjunction",
+"tag": "等位接続詞"
+},
+{
+"id": "W119",
+"ja": "または／それとも",
+"en": "or",
+"category": "conjunction",
+"tag": "等位接続詞"
+},
+{
+"id": "W120",
+"ja": "だから／それで",
+"en": "so",
+"category": "conjunction",
+"tag": "等位接続詞"
+},
+{
+"id": "W121",
+"ja": "～なので／なぜなら",
+"en": "because",
+"category": "conjunction",
+"tag": "理由"
+},
+{
+"id": "W122",
+"ja": "もし～なら",
+"en": "if",
+"category": "conjunction",
+"tag": "条件"
+},
+{
+"id": "W123",
+"ja": "～するとき",
+"en": "when",
+"category": "conjunction",
+"tag": "時"
+},
+{
+"id": "W124",
+"ja": "～している間に／一方で",
+"en": "while",
+"category": "conjunction",
+"tag": "時; 対比"
+},
+{
+"id": "W125",
+"ja": "～だけれども",
+"en": "although",
+"category": "conjunction",
+"tag": "譲歩"
+},
+{
+"id": "W126",
+"ja": "～ということ",
+"en": "that",
+"category": "conjunction",
+"tag": "名詞節"
+},
+{
+"id": "W127",
+"ja": "とても",
+"en": "very",
+"category": "adverb",
+"tag": "程度"
+},
+{
+"id": "W128",
+"ja": "本当に／とても",
+"en": "really",
+"category": "adverb",
+"tag": "程度"
+},
+{
+"id": "W129",
+"ja": "～もまた／～すぎる",
+"en": "too",
+"category": "adverb",
+"tag": "追加; 程度"
+},
+{
+"id": "W130",
+"ja": "～もまた",
+"en": "also",
+"category": "adverb",
+"tag": "追加"
+},
+{
+"id": "W131",
+"ja": "ただ～だけ",
+"en": "only",
+"category": "adverb",
+"tag": "限定"
+},
+{
+"id": "W132",
+"ja": "よく／しばしば",
+"en": "often",
+"category": "adverb",
+"tag": "頻度"
+},
+{
+"id": "W133",
+"ja": "ふつうは／たいてい",
+"en": "usually",
+"category": "adverb",
+"tag": "頻度"
+},
+{
+"id": "W134",
+"ja": "いつも",
+"en": "always",
+"category": "adverb",
+"tag": "頻度"
+},
+{
+"id": "W135",
+"ja": "ときどき",
+"en": "sometimes",
+"category": "adverb",
+"tag": "頻度"
+},
+{
+"id": "W136",
+"ja": "決して～ない",
+"en": "never",
+"category": "adverb",
+"tag": "頻度; 否定"
+},
+{
+"id": "W137",
+"ja": "すでに",
+"en": "already",
+"category": "adverb",
+"tag": "現在完了"
+},
+{
+"id": "W138",
+"ja": "まだ／もう",
+"en": "yet",
+"category": "adverb",
+"tag": "現在完了; 疑問・否定"
+},
+{
+"id": "W139",
+"ja": "まだ／今でも",
+"en": "still",
+"category": "adverb",
+"tag": "継続"
+},
+{
+"id": "W140",
+"ja": "もう一度",
+"en": "again",
+"category": "adverb",
+"tag": "反復"
+},
+{
+"id": "W141",
+"ja": "一緒に",
+"en": "together",
+"category": "adverb",
+"tag": "様態"
+},
+{
+"id": "W142",
+"ja": "上手に／よく",
+"en": "well",
+"category": "adverb",
+"tag": "様態"
+},
+{
+"id": "W143",
+"ja": "ここに／ここで",
+"en": "here",
+"category": "adverb",
+"tag": "場所"
+},
+{
+"id": "W144",
+"ja": "そこに／そこで",
+"en": "there",
+"category": "adverb",
+"tag": "場所"
+},
+{
+"id": "W145",
+"ja": "今",
+"en": "now",
+"category": "adverb",
+"tag": "時"
+},
+{
+"id": "W146",
+"ja": "そのとき／それから",
+"en": "then",
+"category": "adverb",
+"tag": "時・順序"
+},
+{
+"id": "W147",
+"ja": "よい",
+"en": "good",
+"category": "adjective",
+"tag": "基本形容詞"
+},
+{
+"id": "W148",
+"ja": "悪い",
+"en": "bad",
+"category": "adjective",
+"tag": "基本形容詞"
+},
+{
+"id": "W149",
+"ja": "新しい",
+"en": "new",
+"category": "adjective",
+"tag": "基本形容詞"
+},
+{
+"id": "W150",
+"ja": "古い／年を取った",
+"en": "old",
+"category": "adjective",
+"tag": "基本形容詞"
+},
+{
+"id": "W151",
+"ja": "若い",
+"en": "young",
+"category": "adjective",
+"tag": "基本形容詞"
+},
+{
+"id": "W152",
+"ja": "大きい",
+"en": "big",
+"category": "adjective",
+"tag": "大きさ"
+},
+{
+"id": "W153",
+"ja": "小さい",
+"en": "small",
+"category": "adjective",
+"tag": "大きさ"
+},
+{
+"id": "W154",
+"ja": "長い",
+"en": "long",
+"category": "adjective",
+"tag": "大きさ; 時間"
+},
+{
+"id": "W155",
+"ja": "短い／背が低い",
+"en": "short",
+"category": "adjective",
+"tag": "大きさ"
+},
+{
+"id": "W156",
+"ja": "多くの",
+"en": "many",
+"category": "adjective",
+"tag": "数量"
+},
+{
+"id": "W157",
+"ja": "多くの",
+"en": "much",
+"category": "adjective",
+"tag": "数量"
+},
+{
+"id": "W158",
+"ja": "より多くの／もっと",
+"en": "more",
+"category": "adjective",
+"tag": "比較"
+},
+{
+"id": "W159",
+"ja": "最も多くの／ほとんどの",
+"en": "most",
+"category": "adjective",
+"tag": "比較"
+},
+{
+"id": "W160",
+"ja": "異なる",
+"en": "different",
+"category": "adjective",
+"tag": "比較・特徴"
+},
+{
+"id": "W161",
+"ja": "同じ",
+"en": "same",
+"category": "adjective",
+"tag": "比較・特徴"
+},
+{
+"id": "W162",
+"ja": "重要な",
+"en": "important",
+"category": "adjective",
+"tag": "評価"
+},
+{
+"id": "W163",
+"ja": "簡単な",
+"en": "easy",
+"category": "adjective",
+"tag": "評価"
+},
+{
+"id": "W164",
+"ja": "難しい",
+"en": "difficult",
+"category": "adjective",
+"tag": "評価"
+},
+{
+"id": "W165",
+"ja": "可能な",
+"en": "possible",
+"category": "adjective",
+"tag": "評価"
+},
+{
+"id": "W166",
+"ja": "うれしい／幸せな",
+"en": "happy",
+"category": "adjective",
+"tag": "感情"
+},
+{
+"id": "W167",
+"ja": "1つの／ある",
+"en": "a",
+"category": "determiner",
+"tag": "冠詞"
+},
+{
+"id": "W168",
+"ja": "1つの／ある",
+"en": "an",
+"category": "determiner",
+"tag": "冠詞"
+},
+{
+"id": "W169",
+"ja": "その／例の",
+"en": "the",
+"category": "determiner",
+"tag": "冠詞"
+},
+{
+"id": "W170",
+"ja": "いくつかの／いくらかの",
+"en": "some",
+"category": "determiner",
+"tag": "数量"
+},
+{
+"id": "W171",
+"ja": "いくらかの／何かの",
+"en": "any",
+"category": "determiner",
+"tag": "数量"
+},
+{
+"id": "W172",
+"ja": "それぞれの",
+"en": "each",
+"category": "determiner",
+"tag": "数量"
+},
+{
+"id": "W173",
+"ja": "すべての／毎～",
+"en": "every",
+"category": "determiner",
+"tag": "数量"
+},
+{
+"id": "W174",
+"ja": "すべての",
+"en": "all",
+"category": "determiner",
+"tag": "数量"
+},
+{
+"id": "W175",
+"ja": "両方の",
+"en": "both",
+"category": "determiner",
+"tag": "数量"
+},
+{
+"id": "W176",
+"ja": "もう1つの／別の",
+"en": "another",
+"category": "determiner",
+"tag": "数量"
+}
+]
+}
