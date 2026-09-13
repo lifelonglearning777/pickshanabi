@@ -89,6 +89,9 @@
     transition:transform .08s;
   }
   .btn:active{transform:translateY(3px);box-shadow:0 3px 0 rgba(0,0,0,.35)}
+  .btn[disabled]{opacity:.5;filter:saturate(.45);cursor:default;pointer-events:none;transform:none}
+  .btn[disabled]:active{transform:none}
+  .inputwrap.is-locked .typebox{opacity:.55}
   .btn svg{width:1.15em;height:1.15em;fill:currentColor;flex:0 0 auto;margin-top:-.05em}
   .btn-blue{background:linear-gradient(180deg,var(--blue-2),var(--blue));border:2px solid #BFDBFE}
   .btn-pink{background:linear-gradient(180deg,var(--pink-2),var(--pink));border:2px solid #FBCFE8}
@@ -472,7 +475,7 @@
       </div>
       <button class="btn btn-yellow start" id="startBtn" type="button">
         <svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg>
-        START
+        <span id="startLabel">START</span>
       </button>
     </div>
 
@@ -645,6 +648,16 @@ const settings = {
 };
 let WORDS = [];
 let game = null;
+let inputLocked = false;   // true during the 3-2-1 countdown: keystrokes are ignored
+let cdTimer = null;        // countdown interval, cleared when the game is stopped
+
+function lockInput(on) {
+  inputLocked = on;
+  const tb = $('typebox');
+  tb.value = '';
+  tb.placeholder = on ? 'Ready...' : 'Type here...';
+  document.querySelector('.inputwrap').classList.toggle('is-locked', on);
+}
 
 /* ---- screens ---- */
 const show = id => {
@@ -675,7 +688,7 @@ $('startBtn').addEventListener('click', startGame);
 $('tryAgain').addEventListener('click', startGame);
 
 /* ---- words ---- */
-const API_BASE = 'https://script.google.com/macros/s/AKfycbwodxI--tQ9yrnnfVrsSUYOWhvwyRXTuJZk8vTUU_Or5lSGTXUiB0xc8yybJdE54frB/exec';
+const API_BASE = 'https://script.google.com/macros/s/AKfycbyFVh9mer_RYFupFwVyOZbWpBwk4BoGasmF8NomSbr14RN4_FzVXZxqjRgoo9_1KXx10w/exec';
 
 async function loadWords() {
   // 1) live spreadsheet via GAS  2) local words.json  3) built-in 20-word list
@@ -708,6 +721,7 @@ const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.r
 
 /* ---- game ---- */
 function startGame() {
+  if (!WORDS.length) { toast('単語を読み込み中です。少し待ってからSTARTしてね'); return; }
   if (game) stopGame();
   const deck = shuffle(WORDS.slice());
   game = {
@@ -726,7 +740,12 @@ function startGame() {
   $('fwLayer').innerHTML = '';
   show('play');
   nextWord();
+  if (!game) return;                 // nextWord bailed out (no usable word)
+  lockInput(true);                   // no typing until GO!
+  tb.focus();
   countdown(() => {
+    if (!game) return;               // HOME was pressed during the countdown
+    lockInput(false);
     game.running = true;
     game.timer = setInterval(tick, 1000);
     tb.focus();
@@ -749,15 +768,22 @@ function updateStreak() {
 }
 function stopStreak() { if (game && game.streakTimer) clearInterval(game.streakTimer); if (game) game.streakTimer = null; document.querySelector('.stat.combo').classList.remove('is-hot'); }
 function stopGame() {
-  stopStreak(); if (game && game.timer) clearInterval(game.timer); game = null; $('countdown').classList.remove('is-on'); }
+  stopStreak();
+  if (game && game.timer) clearInterval(game.timer);
+  if (cdTimer) { clearInterval(cdTimer); cdTimer = null; }
+  game = null;
+  lockInput(false);
+  $('countdown').classList.remove('is-on');
+}
 
 function countdown(done) {
   const el = $('countdown'); let n = 3;
+  if (cdTimer) clearInterval(cdTimer);
   el.textContent = n; el.classList.add('is-on');
-  const iv = setInterval(() => {
+  cdTimer = setInterval(() => {
     n--;
     if (n === 0) { el.textContent = 'GO!'; }
-    else if (n < 0) { clearInterval(iv); el.classList.remove('is-on'); done(); }
+    else if (n < 0) { clearInterval(cdTimer); cdTimer = null; el.classList.remove('is-on'); done(); }
     else el.textContent = n;
   }, 700);
 }
@@ -778,6 +804,11 @@ function updateTimer() {
 function nextWord() {
   if (game.idx >= game.deck.length) { shuffle(game.deck); game.idx = 0; }
   game.word = game.deck[game.idx++];
+  if (!game.word) {                  // empty word list: stop cleanly instead of freezing
+    stopGame(); show('home');
+    toast('単語を読み込めませんでした。もう一度STARTを押してね');
+    return;
+  }
   game.hintUsed = false;
   const ja = game.word.ja;
   $('wJa').innerHTML = ja.replace(/／/g, '／<wbr>');
@@ -836,15 +867,19 @@ function updateStats() {
   $('pAcc').textContent = tried ? Math.round(game.correct / tried * 100) : 100;
 }
 
-$('typebox').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); judge(); } });
+$('typebox').addEventListener('keydown', e => {
+  if (inputLocked) { e.preventDefault(); return; }              // countdown: swallow every key
+  if (e.key === 'Enter') { e.preventDefault(); judge(); }
+});
 $('typebox').addEventListener('paste', e => e.preventDefault());
 $('typebox').addEventListener('drop', e => e.preventDefault());
 $('typebox').addEventListener('contextmenu', e => e.preventDefault());
 document.querySelector('.wordcard').addEventListener('copy', e => e.preventDefault());
 document.querySelector('.wordcard').addEventListener('contextmenu', e => e.preventDefault());
 $('typebox').addEventListener('input', () => {
-  if (!game || !game.running) return;
   const tb = $('typebox');
+  if (inputLocked) { tb.value = ''; return; }                   // IME etc. during the countdown
+  if (!game || !game.running) { tb.value = ''; return; }
   const fixed = toHalfWidth(tb.value);
   if (fixed !== tb.value) { const pos = tb.selectionStart; tb.value = fixed; tb.setSelectionRange(pos, pos); }
   const v = norm(tb.value), t = norm(game.word.en);
@@ -956,9 +991,9 @@ function openModal(kind) {
     <div class="idrow">
       <label for="setClass">クラス</label><input id="setClass" class="idbox" value="${settings.cls}" maxlength="2" placeholder="2C" autocomplete="off">
       <span class="dash">-</span>
-      <label for="setNum">番号</label><input id="setNum" class="idbox" value="${settings.num}" inputmode="numeric" maxlength="2" placeholder="15" autocomplete="off">
+      <label for="setNum">番号</label><input id="setNum" class="idbox" value="${settings.num}" inputmode="numeric" maxlength="2" placeholder="40" autocomplete="off">
     </div>
-    <p class="muted ja">ランキングには <b>${settings.cls || '2C'}-${settings.num || '15'}</b> のように表示されます。</p>`;
+    <p class="muted ja">ランキングには <b>${settings.cls || '2C'}-${settings.num || '40'}</b> のように表示されます。</p>`;
   else if (kind === 'RANKING') openRanking_('today');
   document.querySelector('#modal .box').classList.toggle('wide', kind === 'HOW TO PLAY');
   $('modal').classList.add('is-on');
@@ -1005,8 +1040,12 @@ function setCheer(t) { const c = $('pCheer'); c.textContent = t; c.classList.rem
 function toast(msg) { const t = $('toast'); t.textContent = msg; t.classList.add('is-on'); setTimeout(() => t.classList.remove('is-on'), 3500); }
 
 /* ---- boot ---- */
-loadWords();
-show('home');
+(function boot() {
+  const btn = $('startBtn'), lbl = $('startLabel');
+  btn.disabled = true; lbl.textContent = 'LOADING...';
+  loadWords().finally(() => { btn.disabled = false; lbl.textContent = 'START'; });
+  show('home');
+})();
 </script>
 </body>
 </html>
